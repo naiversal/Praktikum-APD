@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="biodata"/>
+        <attribute name="authors" value="ADVAN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-18 02.23.11 PM"/>
+        <attribute name="created" value="QURWQU47REVTS1RPUC1JNDBHRVQyOzIwMjQtMDktMTc7MDMuMDMuMTQgUE07MjY0OA=="/>
+        <attribute name="edited" value="QURWQU47REVTS1RPUC1JNDBHRVQyOzIwMjQtMDktMTg7MDIuMjMuMTEgUE07MTM7MjgwNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Nama, AsalKota, JenisKelamin" type="String" array="False" size=""/>
+            <declare name="Umur, NIM, TotalInt" type="Integer" array="False" size=""/>
+            <declare name="TinggiBadan, BeratBadan, TotalFloat" type="Real" array="False" size=""/>
+            <declare name="StatusMahasiswa" type="Boolean" array="False" size=""/>
+            <output expression="&quot;Masukkan nama : &quot;" newline="True"/>
+            <input variable="Nama"/>
+            <output expression="&quot;Masukkan NIM : &quot;" newline="True"/>
+            <input variable="NIM"/>
+            <output expression="&quot;Masukkan umur : &quot;" newline="True"/>
+            <input variable="Umur"/>
+            <output expression="&quot;Masukkan asal kota : &quot;" newline="True"/>
+            <input variable="AsalKota"/>
+            <output expression="&quot;Masukkan tinggi badan : &quot;" newline="True"/>
+            <input variable="TinggiBadan"/>
+            <output expression="&quot;Masukkan berat badan : &quot;" newline="True"/>
+            <input variable="BeratBadan"/>
+            <output expression="&quot;Masukkan jenis kelamin&quot;" newline="True"/>
+            <input variable="JenisKelamin"/>
+            <output expression="&quot;Apakah anda mahasiswa aktif?&quot;" newline="True"/>
+            <input variable="StatusMahasiswa"/>
+            <if expression="StatusMahasiswa">
+                <then>
+                    <output expression="&quot;=============================&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;        &quot;Biodata Diri&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;=============================&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Nama&quot;&amp; &quot; : &quot;&amp; Nama&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;NIM&quot;&amp; &quot; : &quot;&amp; NIM&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Umur&quot;&amp; &quot; : &quot;&amp; Umur&amp; &quot; tahun&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Asal Kota&quot;&amp; &quot; : &quot;&amp; AsalKota&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Tinggi Badan&quot;&amp; &quot; : &quot;&amp; TinggiBadan&amp; &quot; cm&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Berat Badan&quot;&amp; &quot; : &quot;&amp; BeratBadan&amp; &quot; kg&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Jenis Kelamin&quot;&amp; &quot; : &quot;&amp; JenisKelamin&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Status Mahasiswa&quot;&amp; &quot; : Aktif&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;=============================&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;=============================&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;        &quot;Biodata Diri&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;=============================&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Nama&quot;&amp; &quot; : &quot;&amp; Nama&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;NIM&quot;&amp; &quot; : &quot;&amp; NIM&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Umur&quot;&amp; &quot; : &quot;&amp; Umur&amp; &quot; tahun&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Asal Kota&quot;&amp; &quot; : &quot;&amp; AsalKota&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Tinggi Badan&quot;&amp; &quot; : &quot;&amp; TinggiBadan&amp; &quot; cm&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Berat Badan&quot;&amp; &quot; : &quot;&amp; BeratBadan&amp; &quot; kg&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Jenis Kelamin&quot;&amp; &quot; : &quot;&amp; JenisKelamin&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Status Mahasiswa&quot;&amp; &quot; : Tidak aktif&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;=============================&quot;" newline="True"/>
+                </else>
+            </if>
+            <assign variable="TotalInt" expression="NIM+Umur"/>
+            <assign variable="TotalFloat" expression="TinggiBadan+BeratBadan"/>
+            <output expression="&quot;Total variabel integer : &quot;&amp; TotalInt" newline="True"/>
+            <output expression="&quot;Total variabel float : &quot;&amp; TotalFloat" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

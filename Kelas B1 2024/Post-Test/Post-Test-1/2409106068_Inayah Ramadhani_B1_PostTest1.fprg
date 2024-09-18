@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="okkkk"/>
+        <attribute name="authors" value="ADVAN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-11 02.26.23 PM"/>
+        <attribute name="created" value="QURWQU47REVTS1RPUC1JNDBHRVQyOzIwMjQtMDktMTA7MDguMjguMjcgUE07MjY1Nw=="/>
+        <attribute name="edited" value="QURWQU47REVTS1RPUC1JNDBHRVQyOzIwMjQtMDktMTE7MDIuMjYuMjMgUE07MTA7MjgwMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="TotalBelanja, Diskon, HargaSetelahDiskon" type="Integer" array="False" size=""/>
+            <input variable="TotalBelanja"/>
+            <if expression="TotalBelanja&lt;100000">
+                <then>
+                    <assign variable="Diskon" expression="TotalBelanja*0"/>
+                    <output expression="&quot;Tidak mendapat diskon&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="TotalBelanja&gt;=100000 and TotalBelanja&lt;500000">
+                        <then>
+                            <assign variable="Diskon" expression="TotalBelanja*0.05"/>
+                            <output expression="&quot;Diskon yang didapat 5%&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="TotalBelanja&gt;=500000 and TotalBelanja&lt;1000000">
+                                <then>
+                                    <assign variable="Diskon" expression="TotalBelanja*0.1"/>
+                                    <output expression="&quot;Diskon yang didapat 10%&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="TotalBelanja&gt;=1000000">
+                                        <then>
+                                            <assign variable="Diskon" expression="TotalBelanja*0.2"/>
+                                            <output expression="&quot;Diskon yang didapat 20%&quot;" newline="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="HargaSetelahDiskon" expression="TotalBelanja - Diskon"/>
+            <output expression="&quot;Total yang harus dibayar = &quot; &amp; HargaSetelahDiskon" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
