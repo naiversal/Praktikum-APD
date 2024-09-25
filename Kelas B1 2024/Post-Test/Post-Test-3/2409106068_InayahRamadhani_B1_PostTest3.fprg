@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="y bangun datar"/>
+        <attribute name="authors" value="ADVAN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-25 02.24.46 PM"/>
+        <attribute name="created" value="QURWQU47REVTS1RPUC1JNDBHRVQyOzIwMjQtMDktMjI7MDUuNDUuNTcgUE07MjY1OQ=="/>
+        <attribute name="edited" value="QURWQU47REVTS1RPUC1JNDBHRVQyOzIwMjQtMDktMjU7MDIuMjQuNDYgUE07MjQ7MjgxNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="menu" type="Integer" array="False" size=""/>
+            <declare name="s, lp, v, k, r, p, l, t" type="Real" array="False" size=""/>
+            <output expression="&quot;Program Menghitung Luas Permukaan, Keliling dan Volume Berbagai Bangun Ruang&quot;" newline="True"/>
+            <output expression="&quot;1. Luas permukaan kubus&quot;" newline="True"/>
+            <output expression="&quot;2. Keliling balok&quot;" newline="True"/>
+            <output expression="&quot;3. Luas permukaan tabung&quot;" newline="True"/>
+            <output expression="&quot;4. Volume limas segi empat&quot;" newline="True"/>
+            <output expression="&quot;5. Keluar dari program&quot;" newline="True"/>
+            <output expression="&quot;Pilih menu yang anda inginkan : &quot;" newline="True"/>
+            <input variable="menu"/>
+            <if expression="menu == 1">
+                <then>
+                    <output expression="&quot;Anda memilih menu : &quot;&amp;&#13;&#10;&quot;1. Luas permukaan Kubus&quot;" newline="True"/>
+                    <output expression="&quot;Masukkan panjang sisi (dalam cm) : &quot;" newline="True"/>
+                    <input variable="s"/>
+                    <assign variable="lp" expression="6*s^2"/>
+                    <output expression="&quot;Luas permukaan kubus adalah &quot;&amp; lp&amp; &quot;cm^2&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="menu == 2">
+                        <then>
+                            <output expression="&quot;Anda memilih menu : &quot;&amp;&#13;&#10;&quot;2. Keliling Balok&quot;" newline="True"/>
+                            <output expression="&quot;Masukkan panjang sisi (dalam cm) : &quot;" newline="True"/>
+                            <input variable="p"/>
+                            <output expression="&quot;Masukkan lebar : &quot;" newline="True"/>
+                            <input variable="l"/>
+                            <output expression="&quot;Masukkan tinggi : &quot;" newline="True"/>
+                            <input variable="t"/>
+                            <assign variable="k" expression="4*(p+l+t)"/>
+                            <output expression="&quot;Keliling balok adalah &quot;&amp; k&amp; &quot; cm&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="menu == 3">
+                                <then>
+                                    <output expression="&quot;Anda memilih menu : &quot;&amp;&#13;&#10;&quot;3. Luas Permukaan Tabung&quot;" newline="True"/>
+                                    <output expression="&quot;Masukkan jari-jari (dalam cm) : &quot;" newline="True"/>
+                                    <input variable="r"/>
+                                    <output expression="&quot;Masukkan tinggi : &quot;" newline="True"/>
+                                    <input variable="t"/>
+                                    <assign variable="lp" expression="2*(22/7)*r*(r+t)"/>
+                                    <output expression="&quot;Luas permukaan tabung adalah &quot;&amp; lp&amp; &quot;cm^2&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="menu == 4">
+                                        <then>
+                                            <output expression="&quot;Anda memilih menu : &quot;&amp;&#13;&#10;&quot;4. Volume Limas Segi Empat&quot;" newline="True"/>
+                                            <output expression="&quot;Masukkan panjang sisi : &quot;" newline="True"/>
+                                            <input variable="s"/>
+                                            <output expression="&quot;Masukkan tinggi : &quot;" newline="True"/>
+                                            <input variable="t"/>
+                                            <assign variable="v" expression="1/3*(s^2)*t"/>
+                                            <output expression="&quot;Volume limas adalah &quot;&amp; v&amp; &quot;cm^3&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="menu == 5">
+                                                <then>
+                                                    <output expression="&quot;Anda memilih menu : &quot;&amp;&#13;&#10;&quot;5. Keluar dari program&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Menu tidak tersedia.&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Program telah berakhir. Terima kasih.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
